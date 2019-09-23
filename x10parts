@@ -1,0 +1,30 @@
+Partlist
+
+Exported from Control.brd at 9/21/2019 10:53 PM
+
+EAGLE Version 7.6.0 Copyright (c) 1988-2016 CadSoft
+
+Assembly variant: 
+
+Part     Value           Package         Library             Position (inch)       Orientation
+
+C1       4.5uF 250V      C275-205X316    rcl                 (1.45 0.7)            R270
+C2       1000uF          E5-13           rcl                 (2.125 0.3)           R90
+C3       .1uF 275V       C150-091X182    rcl                 (2.05 0.95)           R270
+C4                       C025-024X044    rcl                 (3.15 0.45)           R0
+D1       1N4005          DO41-10         diode               (2 0.3)               R90
+D2       1N4005          DO41-10         diode               (1.9 0.3)             R90
+D3       5.1V            P1Z12           diode               (2.35 0.3)            R90
+IC1      MEGA8-P         DIL28-3         atmel               (3.15 0.45)           R180
+PROG-HDR                 MA03-2          con-lstb            (2.8 1)               R0
+Q1       16MHz           TC38H           crystal             (2.95 0.65)           R0
+R1       5M              0414/15         rcl                 (0.7 0.15)            R180
+R2       1.1M            0414/15         rcl                 (0.95 0.95)           R270
+R3       1M              0411/12         rcl                 (2.4 1)               R90
+R4       50              0309/12         rcl                 (2.25 0.3)            R270
+R5       5M              0411/12         rcl                 (2.75 1.25)           R180
+R6       220             0411/12         rcl                 (3.1 0.15)            R0
+SW1                      EDG-08          special             (3.4 1)               MR0
+T1       2N2222          TO92            transistor-neu-to92 (2.55 0.15)           R270
+X1       MKDSN1,5/3-5,08 MKDSN1,5/3-5,08 con-phoenix-508     (0.65 0.55)           R0
+X2       MKDSN1,5/3-5,08 MKDSN1,5/3-5,08 con-phoenix-508     (0.65 0.9)            R0
