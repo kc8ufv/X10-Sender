@@ -16265,6 +16265,8 @@ Source: 008-0260-0_E.pdf</description>
 <part name="GND6" library="supply1" deviceset="GND" device=""/>
 <part name="R7" library="rcl" deviceset="R-US_" device="0207/7" value="120K"/>
 <part name="GND10" library="supply1" deviceset="GND" device=""/>
+<part name="R8" library="rcl" deviceset="R-US_" device="0207/7" value="120K"/>
+<part name="C5" library="rcl" deviceset="C-US" device="C0402K"/>
 </parts>
 <sheets>
 <sheet>
@@ -16336,14 +16338,19 @@ Source: 008-0260-0_E.pdf</description>
 <attribute name="NAME" x="91.44" y="85.344" size="1.778" layer="95" rot="R180"/>
 <attribute name="VALUE" x="93.98" y="81.28" size="1.778" layer="96" rot="R180"/>
 </instance>
-<instance part="C4" gate="G$1" x="86.36" y="60.96"/>
-<instance part="P+5" gate="1" x="86.36" y="66.04"/>
-<instance part="GND6" gate="1" x="86.36" y="53.34"/>
+<instance part="C4" gate="G$1" x="83.82" y="71.12"/>
+<instance part="P+5" gate="1" x="76.2" y="76.2"/>
+<instance part="GND6" gate="1" x="76.2" y="63.5"/>
 <instance part="R7" gate="G$1" x="170.18" y="88.9" smashed="yes">
 <attribute name="NAME" x="166.37" y="90.3986" size="1.778" layer="95"/>
 <attribute name="VALUE" x="171.45" y="90.678" size="1.778" layer="96"/>
 </instance>
 <instance part="GND10" gate="1" x="175.26" y="86.36"/>
+<instance part="R8" gate="G$1" x="88.9" y="73.66" smashed="yes">
+<attribute name="NAME" x="85.09" y="75.1586" size="1.778" layer="95"/>
+<attribute name="VALUE" x="90.17" y="75.438" size="1.778" layer="96"/>
+</instance>
+<instance part="C5" gate="G$1" x="76.2" y="71.12"/>
 </instances>
 <busses>
 </busses>
@@ -16431,6 +16438,9 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="C4" gate="G$1" pin="2"/>
 <pinref part="GND6" gate="1" pin="GND"/>
+<wire x1="76.2" y1="66.04" x2="83.82" y2="66.04" width="0.1524" layer="91"/>
+<pinref part="C5" gate="G$1" pin="2"/>
+<junction x="76.2" y="66.04"/>
 </segment>
 <segment>
 <pinref part="R7" gate="G$1" pin="2"/>
@@ -16472,9 +16482,12 @@ Source: 008-0260-0_E.pdf</description>
 <pinref part="PROG-HDR" gate="1" pin="2"/>
 <wire x1="167.64" y1="40.64" x2="167.64" y2="35.56" width="0.1524" layer="91"/>
 <wire x1="167.64" y1="35.56" x2="93.98" y2="35.56" width="0.1524" layer="91"/>
-<wire x1="93.98" y1="35.56" x2="93.98" y2="101.6" width="0.1524" layer="91"/>
+<wire x1="93.98" y1="35.56" x2="93.98" y2="73.66" width="0.1524" layer="91"/>
 <pinref part="IC1" gate="G$1" pin="PC6(/RESET)"/>
+<wire x1="93.98" y1="73.66" x2="93.98" y2="101.6" width="0.1524" layer="91"/>
 <wire x1="93.98" y1="101.6" x2="101.6" y2="101.6" width="0.1524" layer="91"/>
+<pinref part="R8" gate="G$1" pin="2"/>
+<junction x="93.98" y="73.66"/>
 </segment>
 </net>
 <net name="+5V" class="0">
@@ -16504,6 +16517,7 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="43.18" y1="78.74" x2="43.18" y2="73.66" width="0.1524" layer="91"/>
 <wire x1="58.42" y1="78.74" x2="43.18" y2="78.74" width="0.1524" layer="91"/>
 <junction x="43.18" y="78.74"/>
+<junction x="58.42" y="78.74"/>
 </segment>
 <segment>
 <pinref part="R4" gate="G$1" pin="2"/>
@@ -16512,6 +16526,11 @@ Source: 008-0260-0_E.pdf</description>
 <segment>
 <pinref part="C4" gate="G$1" pin="1"/>
 <pinref part="P+5" gate="1" pin="+5V"/>
+<pinref part="R8" gate="G$1" pin="1"/>
+<wire x1="76.2" y1="73.66" x2="83.82" y2="73.66" width="0.1524" layer="91"/>
+<junction x="83.82" y="73.66"/>
+<pinref part="C5" gate="G$1" pin="1"/>
+<junction x="76.2" y="73.66"/>
 </segment>
 </net>
 <net name="N$9" class="0">
@@ -16627,6 +16646,7 @@ Source: 008-0260-0_E.pdf</description>
 <wire x1="2.54" y1="104.14" x2="15.24" y2="104.14" width="0.1524" layer="91"/>
 <junction x="2.54" y="86.36"/>
 <junction x="2.54" y="76.2"/>
+<junction x="12.7" y="86.36"/>
 </segment>
 </net>
 <net name="N$21" class="0">
@@ -16670,6 +16690,13 @@ Source: 008-0260-0_E.pdf</description>
 </nets>
 </sheet>
 </sheets>
+<errors>
+<approved hash="104,1,101.6,66.04,IC1,VCC,+5V,,,"/>
+<approved hash="104,1,101.6,91.44,IC1,AVCC,+5V,,,"/>
+<approved hash="113,1,175.26,44.6447,PROG-HDR,,,,,"/>
+<approved hash="113,1,193.04,68.4488,SW1,,,,,"/>
+<approved hash="113,1,84.7502,69.85,C4,,,,,"/>
+</errors>
 </schematic>
 </drawing>
 </eagle>
