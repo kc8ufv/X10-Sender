@@ -16247,7 +16247,7 @@ Source: 008-0260-0_E.pdf</description>
 <part name="P+1" library="supply1" deviceset="+5V" device=""/>
 <part name="P+2" library="supply1" deviceset="+5V" device=""/>
 <part name="P+3" library="supply1" deviceset="+5V" device=""/>
-<part name="D3" library="diode" deviceset="ZENER-DIODE" device="P1-Z12" value="5.1V"/>
+<part name="D3" library="diode" deviceset="ZENER-DIODE" device="DO34-7" value="5.1V"/>
 <part name="GND7" library="supply1" deviceset="GND" device=""/>
 <part name="SW1" library="special" deviceset="SW_DIP-8" device=""/>
 <part name="T1" library="transistor-neu-to92" deviceset="*-NPN-" device="TO92" value="2N2222"/>
